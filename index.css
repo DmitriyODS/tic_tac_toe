@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e23;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.app-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #191919;
+    border-bottom: 1px solid #E3651D;
+}
+
+.dialog-title {
+    text-align: center;
+}
+
+.app-bar h1 {
+    color: #E3651D;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+h1 {
+    color: #E19898;
+    font-weight: 300;
+}
+
+dialog[data-open="false"] {
+    display: none;
+}
+
+dialog {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(37, 30, 27, 0.5);
+    backdrop-filter: blur(0.6rem);
+}
+
+.body-dialog {
+    background-color: #1e1e23;
+    padding: 1.5rem;
+    border: 1px solid #E19898;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 1rem;
+    border: none;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: background-color 100ms;
+}
+
+.btn:disabled {
+    display: none;
+}
+
+.btn-primary {
+    background-color: #191919;
+    color: #E3651D;
+    border: 1px solid #E3651D;
+}
+
+.btn-primary:hover {
+    background-color: #0f0f0f;
+    cursor: pointer;
+}
+
+.btn-primary:active {
+    background-color: #0a0a0a
+}
+
+.btn-secondary {
+    background-color: #3F1D38;
+    color: #E19898;
+    border: 1px solid #E19898;
+}
+
+.btn-secondary:hover {
+    background-color: #2f142c;
+    cursor: pointer;
+}
+
+.btn-secondary:active {
+    background-color: #251124;
+}
+
+.btn-bar {
+    display: flex;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color: #191919;
+    border: 1px solid #E3651D;
+    color: #E3651D;
+    padding: 4px;
+    transition: background-color 100ms;
+}
+
+.btn-bar:hover {
+    background-color: #0f0f0f;
+    cursor: pointer;
+}
+
+.btn-bar:active {
+    background-color: #0a0a0a;
+}
+
+.main-filed {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E3651D;
+    color: #E3651D;
+    font-size: 4rem;
+    font-weight: 700;
+    transition: background-color 100ms;
+    user-select: none;
+}
+
+.cell:hover {
+    background-color: #0f0f0f;
+    cursor: pointer;
+}
+
+.cell:active {
+    background-color: #0a0a0a;
+}
+
+.field {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid #E3651D;
+    background-color: #191919;
+}
